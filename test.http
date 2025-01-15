@@ -1,0 +1,11 @@
+### 회원가입
+POST https://learn.codeit.kr/api/link-service/users
+Content-Type: application/json
+
+{
+  "name": "김유저",
+  "email": "userKim@example.com",
+  "password": "rid10RVD^92"
+}
+
+###
