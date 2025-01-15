@@ -8,4 +8,11 @@ Content-Type: application/json
   "password": "rid10RVD^92"
 }
 
-###
+### 로그인
+POST https://learn.codeit.kr/api/link-service/auth/login
+Content-Type: application/json
+
+{
+  "email": "universe_wz@example.com",
+  "password": "wz12^FacT17"
+}
