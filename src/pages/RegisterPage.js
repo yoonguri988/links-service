@@ -44,11 +44,22 @@ function RegisterPage() {
      * 로그인이 성공하면 `/me`로 이동한다
      */
     // 서버에 회원을 생성
-    const user = await axios.post("/users/", {
+    await axios.post("/users/", {
       name,
       email,
       password,
     });
+    await axios.post(
+      "/auth/login",
+      {
+        email,
+        password,
+      },
+      {
+        withCredentials: true,
+      }
+    );
+    navigate("/me");
   }
 
   return (
