@@ -1,5 +1,5 @@
 import axios from "../lib/axios";
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 const AuthContext = createContext({
   user: null, // user데이터
@@ -35,6 +35,10 @@ export function AuthProvider({ children }) {
     const nextUser = res.data;
     setUser(nextUser);
   }
+  // 처음 렌더링 되면 유저 데이터 가져오기
+  useEffect(() => {
+    getMe();
+  }, []);
   return (
     <AuthContext.Provider value={{ user, login, logout, updateMe }}>
       {children}
