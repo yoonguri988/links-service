@@ -12,7 +12,7 @@ import LinkCard from "../components/LinkCard";
 import { useAuth } from "../contexts/AuthProvider";
 
 function MyPage() {
-  const { user } = useAuth();
+  const { user } = useAuth(true);
   // const [user, setUser] = useState(null);
   const [links, setLinks] = useState([]);
   const navigate = useNavigate();
