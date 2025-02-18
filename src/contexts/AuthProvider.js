@@ -22,7 +22,7 @@ export function AuthProvider({ children }) {
       ...prevValues,
       isPending: true,
     }));
-    let nextUser;
+    let nextUser = null;
     try {
       const res = await axios.get("/users/me");
       nextUser = res.data;
@@ -45,6 +45,11 @@ export function AuthProvider({ children }) {
 
   async function logout() {
     /** @TODO 로그아웃 구현하기 */
+    await axios.delete("/auth/logout");
+    setValues((prevValues) => ({
+      ...prevValues,
+      user: null,
+    }));
   }
 
   async function updateMe(formData) {
