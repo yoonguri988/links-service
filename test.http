@@ -3,9 +3,9 @@ POST https://learn.codeit.kr/api/link-service/users
 Content-Type: application/json
 
 {
-  "name": "김유저",
-  "email": "userKim@example.com",
-  "password": "rid10RVD^92"
+  "name": "김감쟈",
+  "email": "min9yu_mg@example.com",
+  "password": "potato^17SVT"
 }
 
 ### 로그인
@@ -13,6 +13,11 @@ POST https://learn.codeit.kr/api/link-service/auth/login
 Content-Type: application/json
 
 {
-  "email": "universe_wz@example.com",
-  "password": "wz12^FacT17"
+  "email": "min9yu_mg@example.com",
+  "password": "potato^17SVT"
 }
+
+### 로그아웃
+DELETE https://learn.codeit.kr/api/link-service/auth/logout
+Cookie: access-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyMSIsImlhdCI6MTczOTg4NTg1NCwiZXhwIjoxNzM5ODg5NDU0fQ.4-_tnjIAEEGEHo5KVr9R84G9KkO6KZmGsRdXPf-jQr0; Path=/api/link-service; HttpOnly; Secure; SameSite=None,refresh-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyMSIsImlhdCI6MTczOTg4NTg1NCwiZXhwIjoxNzQwNDkwNjU0fQ.AfnT0cQoEk18HU-nFlQXjkrW0zJ6u3_wIy090t3LMY8; Path=/api/link-service/auth; HttpOnly; Secure; SameSite=None
+
